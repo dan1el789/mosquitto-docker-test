@@ -10,3 +10,9 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
+  apache:
+    image: httpd:latest
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
+    ports:
+    - 80:80
